@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# PM2
+.pm2/
+
+# Cache
+.protocolo_cache/
+.lab_assistant/
+
+# Environment
+.env
+.env.local
+*.env
+
+# Temporary
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Node (if used)
+node_modules/
+
+# Webapp folder (if needed separately)
+webapp/node_modules/
+webapp/.wrangler/
+webapp/dist/
+
+# System files
+.bash*
+.profile
+.sudo_as_admin_successful
+.config/
+.genspark_env
+.git-credentials
+.gitconfig
