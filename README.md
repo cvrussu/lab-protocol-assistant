@@ -1,177 +1,303 @@
-# 🧪 Protocol Extractor v2.0
+# 🧬 Lab Protocol Assistant
 
-**Extrae y estandariza protocolos de laboratorio desde artículos científicos de PubMed Central**
+[![Version](https://img.shields.io/badge/version-3.0-blue.svg)](https://github.com/cvrussu/lab-protocol-assistant)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.8+-yellow.svg)](https://www.python.org/)
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
 
-## 🌟 Características
+**Tu compañero inteligente para extraer y estandarizar protocolos de laboratorio desde literatura científica**
 
-- 🔍 **Búsqueda inteligente** en PubMed Central (solo artículos Open Access)
-- 📄 **Extracción automática** de la sección Methods/Materials
-- 🤖 **IA avanzada** para estandarizar protocolos (OpenAI GPT-4/GPT-5)
-- 💾 **Sistema de caché** para optimizar búsquedas repetidas
-- 📊 **Múltiples formatos** de exportación (Markdown, HTML, JSON, LaTeX)
-- 🎨 **Interfaz rica** con colores, tablas y barras de progreso
-- 🔧 **Tres estilos** de protocolo (detallado, conciso, educativo)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/cvrussu/lab-protocol-assistant/main/demo.gif" alt="Demo" width="800">
+</p>
 
-## 📦 Instalación
+## ✨ Características
+
+### 🎮 **Gamificación Completa**
+- Sistema de puntos y niveles
+- Logros desbloqueables
+- Progreso persistente
+- Ranking y estadísticas
+
+### 🔬 **Extracción Inteligente**
+- Búsqueda en PubMed Central
+- Extracción automática de sección Methods
+- Estandarización con IA (GPT-4/GPT-5)
+- Múltiples formatos de exportación
+
+### 📚 **Centro de Aprendizaje**
+- Quiz interactivos
+- Tips de laboratorio
+- Calculadoras integradas
+- Recursos educativos
+
+### 🎨 **Experiencia Visual**
+- Interfaz web moderna
+- Animaciones científicas
+- Diseño responsive
+- Modo oscuro/claro
+
+## 🚀 Inicio Rápido
+
+### Opción 1: Aplicación Web (Más Fácil)
+
+Simplemente abre el archivo `lab_protocol_app.html` en tu navegador:
 
 ```bash
-# Clonar o descargar el script
-wget protocolo_extractor.py
+# Clonar el repositorio
+git clone https://github.com/cvrussu/lab-protocol-assistant.git
+cd lab-protocol-assistant
 
+# Abrir en el navegador
+open lab_protocol_app.html  # macOS
+xdg-open lab_protocol_app.html  # Linux
+start lab_protocol_app.html  # Windows
+```
+
+### Opción 2: Versión Python CLI
+
+```bash
 # Instalar dependencias
-pip install requests openai markdown rich lxml
+pip install -r requirements.txt
 
-# Configurar API key de OpenAI
-export OPENAI_API_KEY="tu-api-key-aqui"
+# Configurar API key de OpenAI (opcional, para generación con IA)
+export OPENAI_API_KEY="tu-api-key"
+
+# Ejecutar
+python protocolo_lab_assistant.py -i  # Modo interactivo
 ```
 
-## 🚀 Uso
+### Opción 3: Servidor Local
 
-### Modo Interactivo (Recomendado)
 ```bash
-python protocolo_extractor.py -i
+# Iniciar servidor
+python launch_app.py
+
+# O manualmente
+python -m http.server 8000
+# Luego abrir http://localhost:8000/lab_protocol_app.html
 ```
 
-### Búsqueda Simple
-```bash
-python protocolo_extractor.py "Western blot liver tissue"
+## 📦 Estructura del Proyecto
+
+```
+lab-protocol-assistant/
+│
+├── 🌐 Web Application
+│   ├── lab_protocol_app.html       # Aplicación web todo-en-uno
+│   ├── lab_assistant_web.html      # Versión extendida
+│   └── lab_assistant_animations.css # Animaciones científicas
+│
+├── 🐍 Python Scripts
+│   ├── protocolo_lab_assistant.py  # CLI interactivo mejorado
+│   ├── protocolo_extractor.py      # Extractor principal v2.0
+│   ├── test_extractor.py           # Suite de pruebas
+│   └── launch_app.py               # Launcher automático
+│
+├── 📚 Documentation
+│   ├── README.md                   # Documentación principal
+│   ├── UX_UI_MEJORAS.md           # Detalles de mejoras UX/UI
+│   ├── RESUMEN_MEJORAS.md         # Comparación de versiones
+│   └── INSTRUCCIONES.md           # Guía de uso
+│
+├── 🔧 Configuration
+│   ├── requirements.txt            # Dependencias Python
+│   ├── .gitignore                 # Archivos ignorados
+│   └── ecosystem.config.cjs       # Configuración PM2
+│
+└── 📂 Others
+    ├── install_dependencies.sh     # Script de instalación
+    └── demo_ejemplo.sh            # Demo automática
 ```
 
-### Con Opciones Avanzadas
+## 🎯 Casos de Uso
+
+### Para Estudiantes 🎓
+- Aprende técnicas de laboratorio jugando
+- Gana puntos completando quizzes
+- Accede a tips y recursos educativos
+- Progresa desde nivel Estudiante hasta Experto
+
+### Para Asistentes de Laboratorio 🔬
+- Encuentra protocolos rápidamente
+- Estandariza procedimientos
+- Calcula diluciones y concentraciones
+- Documenta experimentos
+
+### Para Investigadores 🧬
+- Extrae protocolos de literatura
+- Genera versiones estandarizadas
+- Exporta en múltiples formatos
+- Mantén biblioteca personal
+
+## 💻 Requisitos
+
+### Para la Aplicación Web
+- Cualquier navegador moderno (Chrome, Firefox, Safari, Edge)
+- No requiere instalación
+
+### Para la Versión Python
+- Python 3.8+
+- Dependencias en `requirements.txt`
+- API key de OpenAI (opcional)
+
+## 🛠️ Instalación Completa
+
 ```bash
-python protocolo_extractor.py "CRISPR Cas9" \
+# 1. Clonar repositorio
+git clone https://github.com/cvrussu/lab-protocol-assistant.git
+cd lab-protocol-assistant
+
+# 2. Crear entorno virtual (recomendado)
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# o
+venv\Scripts\activate  # Windows
+
+# 3. Instalar dependencias
+pip install -r requirements.txt
+
+# 4. Configurar API key (opcional)
+export OPENAI_API_KEY="sk-..."  # Linux/Mac
+# o
+set OPENAI_API_KEY="sk-..."  # Windows
+
+# 5. Ejecutar
+python protocolo_lab_assistant.py -i
+```
+
+## 📖 Uso Detallado
+
+### Aplicación Web
+
+1. **Primera vez**: Se creará un perfil con 0 puntos
+2. **Buscar protocolos**: Usa la barra de búsqueda o tags rápidos
+3. **Ganar puntos**: 
+   - Búsqueda: +5 pts
+   - Generar protocolo: +25 pts
+   - Quiz correcto: +10 pts
+   - Tutorial: +20 pts
+4. **Desbloquear logros**: Completa objetivos para ganar logros
+5. **Usar herramientas**: Calculadora, recursos, tips
+
+### CLI Python
+
+```bash
+# Modo interactivo (recomendado)
+python protocolo_lab_assistant.py -i
+
+# Búsqueda directa
+python protocolo_lab_assistant.py "Western blot liver"
+
+# Con opciones
+python protocolo_lab_assistant.py "PCR" \
     --max-results 10 \
     --style educational \
-    --format html \
-    --output protocolo_crispr.html
+    --format html
+
+# PMC ID específico
+python protocolo_lab_assistant.py --pmc-id 7654321
 ```
 
-### PMC ID Específico
+## 🏆 Sistema de Gamificación
+
+### Niveles
+- **Estudiante**: 0-99 puntos
+- **Asistente**: 100-249 puntos  
+- **Investigador**: 250-499 puntos
+- **Experto**: 500+ puntos
+
+### Logros
+- 🔍 **Primera Búsqueda** - Realiza tu primera búsqueda
+- 📋 **5 Protocolos** - Genera 5 protocolos
+- 🏆 **Experto** - Alcanza 500 puntos
+- 💾 **Maestro del Caché** - Usa el caché 10 veces
+- 🗺️ **Explorador** - Explora 10 artículos
+
+### Puntos
+| Acción | Puntos |
+|--------|--------|
+| Búsqueda | +5 |
+| Generar protocolo | +25 |
+| Quiz correcto | +10 |
+| Completar tutorial | +20 |
+| Documentar | +5 |
+
+## 🔧 Configuración Avanzada
+
+### Variables de Entorno
+
 ```bash
-python protocolo_extractor.py --pmc-id 7654321
-```
-
-## 🎯 Parámetros
-
-| Parámetro | Descripción | Valores | Default |
-|-----------|-------------|---------|---------|
-| `query` | Término de búsqueda | Texto | - |
-| `--pmc-id` | ID directo de PMC | Número | - |
-| `--max-results` | Resultados máximos | 1-20 | 5 |
-| `--style` | Estilo del protocolo | detailed, concise, educational | detailed |
-| `--format` | Formato de salida | markdown, html, json, latex | markdown |
-| `--output` | Archivo de salida | Ruta | protocolo_[PMC_ID].[ext] |
-| `--interactive` | Modo interactivo | Flag | False |
-| `--no-cache` | Desactivar caché | Flag | False |
-| `--model` | Modelo de OpenAI | gpt-4, gpt-4-turbo, etc | gpt-4-turbo-preview |
-
-## 📋 Estilos de Protocolo
-
-### 🔬 **Detailed** (Detallado)
-- Incluye TODOS los detalles
-- Volúmenes exactos
-- Tiempos precisos
-- Alternativas y variaciones
-
-### 📝 **Concise** (Conciso)
-- Solo información esencial
-- Formato compacto
-- Ideal para protocolos conocidos
-
-### 🎓 **Educational** (Educativo)
-- Explica el porqué de cada paso
-- Incluye principios científicos
-- Perfecto para enseñanza
-
-## 🗂️ Estructura del Protocolo Generado
-
-```
-📄 Protocolo Estandarizado
-├── 📚 Información del artículo original
-├── 🧪 Lista de reactivos
-├── 🔬 Materiales y equipos
-├── 📋 Preparación previa
-├── 📝 Procedimiento paso a paso
-│   ├── Tiempo de cada paso
-│   ├── Temperatura
-│   └── Notas específicas
-├── ⚙️ Condiciones experimentales
-├── ⚠️ Notas críticas
-└── 🚨 Advertencias de seguridad
-```
-
-## 💾 Sistema de Caché
-
-El sistema mantiene un caché local de:
-- Búsquedas en PubMed (7 días)
-- Artículos descargados (7 días)
-- Protocolos generados (7 días)
-
-Ubicación: `~/.protocolo_cache/`
-
-Para limpiar el caché:
-```bash
-rm -rf ~/.protocolo_cache/
-```
-
-## 🔧 Solución de Problemas
-
-### Error: "No OPENAI_API_KEY"
-```bash
+# API Keys
 export OPENAI_API_KEY="sk-..."
+
+# Configuración
+export LAB_ASSISTANT_CACHE_DIR="~/.lab_assistant"
+export LAB_ASSISTANT_CACHE_DAYS=7
+export LAB_ASSISTANT_MODEL="gpt-4-turbo-preview"
 ```
 
-### Error: "No se encontró sección Methods"
-- Algunos artículos no tienen Methods disponible
-- Intenta con otro artículo o PMC ID
+### Personalización
 
-### Error de conexión
-- Verifica tu conexión a internet
-- PubMed puede tener límites de rate
+Edita `lab_protocol_app.html` para personalizar:
+- Colores y tema
+- Puntos por acción
+- Niveles y logros
+- Tips y mensajes
 
-## 📊 Ejemplos de Salida
+## 📊 API
 
-### Markdown
-```markdown
-# Protocolo: PCR para detección de E. coli
+### Endpoints Disponibles (si usas servidor)
 
-## 🧪 Reactivos
-- Taq Polymerase (5U/μL)
-- dNTPs (10mM)
-...
+```
+GET  /                          # Página principal
+GET  /lab_protocol_app.html    # Aplicación web
+GET  /api/search?q=query       # Buscar protocolos
+POST /api/generate              # Generar protocolo
+GET  /api/stats                 # Estadísticas usuario
 ```
 
-### HTML
-Genera un documento HTML con estilos CSS profesionales, listo para imprimir o compartir.
+## 🤝 Contribuir
 
-### JSON
-Estructura de datos completa para integración con otros sistemas.
+¡Las contribuciones son bienvenidas!
 
-### LaTeX
-Documento académico listo para compilar con pdflatex.
-
-## 🤝 Contribuciones
-
-Las mejoras son bienvenidas! Algunas ideas:
-- Soporte para más bases de datos (Scopus, Web of Science)
-- Integración con gestores de referencias (Zotero, Mendeley)
-- Generación de diagramas de flujo
-- Cálculo automático de diluciones
+1. Fork el proyecto
+2. Crea tu rama (`git checkout -b feature/AmazingFeature`)
+3. Commit cambios (`git commit -m 'Add AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
 ## 📝 Licencia
 
-MIT License - Uso libre para propósitos académicos y comerciales.
+Distribuido bajo la Licencia MIT. Ver `LICENSE` para más información.
 
-## 🙏 Créditos
+## 👥 Autores
 
-- **PubMed Central** - Por proporcionar acceso abierto a literatura científica
-- **OpenAI** - Por los modelos de lenguaje
-- **Rich** - Por la hermosa interfaz de terminal
+- **Tu Nombre** - *Trabajo Inicial* - [cvrussu](https://github.com/cvrussu)
+
+## 🙏 Agradecimientos
+
+- PubMed Central por el acceso abierto a literatura
+- OpenAI por los modelos de lenguaje
+- La comunidad científica
 
 ## 📧 Contacto
 
-Para reportar bugs o sugerencias, crea un issue en el repositorio.
+- GitHub: [@cvrussu](https://github.com/cvrussu)
+- Proyecto: [https://github.com/cvrussu/lab-protocol-assistant](https://github.com/cvrussu/lab-protocol-assistant)
+
+## 🌟 Características Futuras
+
+- [ ] Modo multijugador/colaborativo
+- [ ] Integración con gestores de referencias
+- [ ] Generación de diagramas de flujo
+- [ ] App móvil nativa
+- [ ] Soporte multiidioma
+- [ ] Integración con equipos de laboratorio
+- [ ] Realidad aumentada para protocolos
 
 ---
 
-**Nota:** Este es un proyecto mejorado basado en el concepto original. La versión 2.0 incluye múltiples mejoras en funcionalidad, interfaz y robustez.
+<p align="center">
+  Hecho con ❤️ para la comunidad científica
+</p>
